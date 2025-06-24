@@ -1,2 +1,2 @@
-# Smart-Mini-Power-Grid-Optimization-Forcasting
-Simulation and optimization of a smart power grid using Python, linear programming, physics-based modeling, and machine learning.
+# Smart-Mini-Power-Grid-Optimisation-Forcasting
+End-to-end simulation and optimisation of a smart power grid, applying data structures, linear programming, mathematical modelling, physics (energy systems), and machine learning to forecast demand. Built in Python using real-world inspired data from South Australia.
