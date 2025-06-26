@@ -9,3 +9,6 @@ file_path = r'D:\New folder\Smart-Mini-Power-Grid-Optimization-Forcasting\data\2
 df = pd.read_csv(file_path)
 print(df.head())
 print(df.columns)
+
+#Transforming the cleaned data into a csv file
+df.to_csv('dataSet01cleaned.csv', index=False)
