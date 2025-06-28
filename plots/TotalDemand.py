@@ -8,7 +8,7 @@ df['date'] = pd.to_datetime(df['date'])
 
 # To calculate the total demand
 if 'total_demand' not in df.columns:
-    mw_columns = [col for col in df.columns if col.endswith('- MW')]
+    mw_columns = [col for col in df.columns if 'MW' in col and 'Emissions' not in col]
     df['total_demand'] = df[mw_columns].sum(axis=1)
 
 
