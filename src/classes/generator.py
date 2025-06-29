@@ -21,3 +21,18 @@ class Generator:
     @property
     def get_cost(self):
         return self.__cost
+
+    #Getter method for the current energy output
+    @property
+    def get_current_output(self):
+        return self.__current_output
+
+    #Getter method for the maximum energy output
+    @property
+    def get_max_capacity(self):
+        return self.__max_capacity
+
+    #    #Getter method for the minimum energy output
+    @property
+    def get_min_capacity(self):
+        return self.__min_capacity
