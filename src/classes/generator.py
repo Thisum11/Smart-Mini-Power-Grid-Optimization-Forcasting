@@ -32,7 +32,13 @@ class Generator:
     def get_max_capacity(self):
         return self.__max_capacity
 
-    #    #Getter method for the minimum energy output
+    #Getter method for the minimum energy output
     @property
     def get_min_capacity(self):
         return self.__min_capacity
+
+    #how much more the generation can produce
+    def available_capacity(self):
+        return self.__max_capacity - self.__current_output
+
+    #the cost for the total energy production

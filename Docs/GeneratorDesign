@@ -20,8 +20,11 @@ Generator Class Design
 .get_min_capacity() --> returns the minimum capacity
 
 --- Optimization ---
-.avaiable_capacity() --> how much more the generation can produce
+.available_capacity() --> how much more the generation can produce
         max_capacity - current_output
 .generationFull_cost() --> the cost for the total energy production
         current_output * cost
 .reset_output() --> resets the current output to 0
+.adjust_cost(value) --> adjusts the cost to the value
+
+ __str__() --> to display the generator information
