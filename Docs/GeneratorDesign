@@ -15,4 +15,9 @@ Generator Class Design
 # Main methods
 .generate (amount) --> sets the generating output between min & max
 .get_cost() --> returns the cost_per_MWh output
+.get_current_output() --> returns the current output
+.get_max_capacity() --> returns the maximum capacity
+.get_min_capacity() --> returns the minimum capacity
+
+--- Optimization ---
 
