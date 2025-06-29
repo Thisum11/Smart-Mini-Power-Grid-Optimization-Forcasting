@@ -42,3 +42,23 @@ class Generator:
         return self.__max_capacity - self.__current_output
 
     #the cost for the total energy production
+    def generation_cost(self):
+        return self.__current_output * self.__cost
+
+    #resets the current output to 0
+    def reset_output(self):
+        self.__current_output = 0
+
+    #adjusts the cost to the given value
+    def adjust_cost(self, value: float):
+        self.__current_output = value
+
+    def __str__(self):
+        return (f"{self.__name}\n"
+                f"output: {self.__current_output}\n"
+                f"cost: {self.__cost}/ MWh\n"
+                f" type: {self.__source_type}\n"
+                f"{'Renewable' if self.__is_renewable else 'Not Renewable'}\n"
+                )
+
+
