@@ -1,0 +1,9 @@
+Node class Design
+
+# Purpose of the Node class
+- To represent the locations of the grid
+
+# Main attributes
+- NodeID (String): Unique identifier for each node.
+- Name (String): Label
+- Type (String): Role in the grid (Ex: Generator, Consumer)

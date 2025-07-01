@@ -51,7 +51,7 @@ class Generator:
 
     #adjusts the cost to the given value
     def adjust_cost(self, value: float):
-        self.__current_output = value
+        self.__cost = value
 
     def __str__(self):
         return (f"{self.__name}\n"
