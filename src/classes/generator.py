@@ -1,8 +1,7 @@
 from dataclasses import dataclass, field
-
+from node import Node
 @dataclass
-class Generator:
-    __name: str
+class Generator(Node):
     __max_capacity: float
     __min_capacity: float
     __cost: float
@@ -54,7 +53,7 @@ class Generator:
         self.__cost = value
 
     def __str__(self):
-        return (f"{self.__name}\n"
+        return (f"{self.name} id:{self.nodeID}\n"
                 f"output: {self.__current_output}\n"
                 f"cost: {self.__cost}/ MWh\n"
                 f" type: {self.__source_type}\n"
