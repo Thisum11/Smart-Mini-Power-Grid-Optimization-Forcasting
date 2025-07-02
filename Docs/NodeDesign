@@ -7,3 +7,5 @@ Node class Design
 - NodeID (String): Unique identifier for each node.
 - Name (String): Label
 - Type (String): Role in the grid (Ex: Generator, Consumer)
+
+# Main methods 
