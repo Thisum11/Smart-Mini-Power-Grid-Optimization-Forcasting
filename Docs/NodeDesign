@@ -8,4 +8,8 @@ Node class Design
 - Name (String): Label
 - Type (String): Role in the grid (Ex: Generator, Consumer)
 
-# Main methods 
+# Main methods
+. __post_init__ () --> validate the dataclass
+. get_info() --> returning the node details
+. connection (Node) --> allow nodes to connect
+. get_connections () --> returns the connected list of nodes
