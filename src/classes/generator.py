@@ -2,16 +2,17 @@ from typing import Tuple
 from node import Node
 class Generator(Node):
 
-    def __init__(self):
+    def __init__(self, nodeID:str, name:str, node_type:str, max_capacity:float, min_capacity:float,
+                 cost:float, source_type:str, is_renewable:bool, current_output:float):
+        super().__init__(nodeID, name, node_type)
 
-    __max_capacity: float
-    __min_capacity: float
-    __cost: float
-    __source_type: str
-    __location: Tuple[float, float] = (0.0, 0.0)
-    __region: str
-    __is_renewable: bool
-    __current_output: float = field(default=0)
+
+        self.__max_capacity = max_capacity
+        self.__min_capacity = min_capacity
+        self.__cost = cost
+        self.__source_type = source_type
+        self.__is_renewable = is_renewable
+        self.__current_output = 0.0
 
     #Generates the power amount that generates by the generator
     def generate (self, amount: float):
