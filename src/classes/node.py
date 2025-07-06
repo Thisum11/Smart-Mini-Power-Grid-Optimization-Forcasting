@@ -1,13 +1,13 @@
+from typing import Tuple
 class Node:
-
-    def __init__(self, nodeID: str, name:str, node_type:str, region:str, location: Tuple[float, float] = (0,0)):
+    def __init__(self, node_id: str, name:str, node_type:str, region:str, location: Tuple[float, float] = (0,0)):
 
         # validating the data
         valid_types = {"generator", "consumer", "junction"}
-        if self.node_type.lower() not in valid_types:
-            raise ValueError(f"Invalid node type: {self.node_type}")
+        if self.__node_type.lower() not in valid_types:
+            raise ValueError(f"Invalid node type: {self.__node_type}")
 
-        self.__nodeID = nodeID
+        self.__node_id = node_id
         self.__name = name
         self.__node_type = node_type.lower()
         self.__region = region
@@ -17,7 +17,7 @@ class Node:
     # Returning the information
     def get_info(self):
         return {
-            "ID"   : self.__nodeID,
+            "ID"   : self.__node_id,
             "Name" : self.__name,
             "Type" : self.__node_type,
         }
