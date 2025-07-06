@@ -1,11 +1,15 @@
-from dataclasses import dataclass, field
+from typing import Tuple
 from node import Node
-@dataclass
 class Generator(Node):
+
+    def __init__(self):
+
     __max_capacity: float
     __min_capacity: float
     __cost: float
     __source_type: str
+    __location: Tuple[float, float] = (0.0, 0.0)
+    __region: str
     __is_renewable: bool
     __current_output: float = field(default=0)
 
