@@ -1,6 +1,6 @@
 class Node:
 
-    def __init__(self, nodeID: str, name:str, node_type:str):
+    def __init__(self, nodeID: str, name:str, node_type:str, region:str, location: Tuple[float, float] = (0,0)):
 
         # validating the data
         valid_types = {"generator", "consumer", "junction"}
@@ -10,6 +10,8 @@ class Node:
         self.__nodeID = nodeID
         self.__name = name
         self.__node_type = node_type.lower()
+        self.__region = region
+        self.__location = location
         self.__connections = []
 
     # Returning the information

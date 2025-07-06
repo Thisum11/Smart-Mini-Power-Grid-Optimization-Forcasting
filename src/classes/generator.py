@@ -2,9 +2,10 @@ from typing import Tuple
 from node import Node
 class Generator(Node):
 
-    def __init__(self, nodeID:str, name:str, node_type:str, max_capacity:float, min_capacity:float,
+    def __init__(self, nodeID:str, name:str, node_type:str, region:str, location: Tuple [float, float],
+                 max_capacity:float, min_capacity:float,
                  cost:float, source_type:str, is_renewable:bool, current_output:float):
-        super().__init__(nodeID, name, node_type)
+        super().__init__(nodeID, name, node_type, region, location)
 
 
         self.__max_capacity = max_capacity
