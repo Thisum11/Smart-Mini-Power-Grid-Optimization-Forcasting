@@ -1,0 +1,13 @@
+Consumer Class Design
+
+# Purpose of Consumer Class
+- Represents the consumers in the grid simulation
+
+# Main attributes
+- demand (MW) : The demand value over time
+- received_power (MW) : power received at the current time step
+- consumer_type (str): residential, industrial, commercial
+
+# Methods
+.unmet_demand () --> demand - received_power
+.reset() --> received_power = 0; for the next timestep
