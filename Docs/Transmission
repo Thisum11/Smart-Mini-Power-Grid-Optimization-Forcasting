@@ -1,0 +1,27 @@
+Transmission Class Design
+
+#Purpose of Transmission Class
+To model the connection between two nodes
+
+# Main attributes
+- transmission_id (str): The unique identifier of the transmission line
+- start_node (Node) : the starting point
+- end_node (Node) : the receiving point of the line
+- capacity (MW) -> float : the max power that can be carried in the line
+- resistance (ohms) -> float: electrical resistance on the line
+- length (km) -> float: length of the transmission line
+- current_flow (MW) -> float: current transmitting amount of power
+- loss (MW) -> float: the amount of losses power during the transmission
+- k_voltage (kV) -> float: 330 the standard transmission voltage in south australian power grid
+
+# Main methods
+.loss_calculation(power:float) --> returns the losses power during the transmission
+        voltage = k_voltage / 2
+        loss = ((power)^2 x resistance)/(voltage)^2
+.transmission_status () --> if the power < capacity : true
+.update_transmission () --> resets power & loss according to the new power
+.get_transmission () --> displays the transmitting start point & end point
+.efficiency () --> the amount of energy received as a percentage of the amount given at the start
+        efficiency = (power - loss)X100/power
+.__str__() --> display the class attributes
+
