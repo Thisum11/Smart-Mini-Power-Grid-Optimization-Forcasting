@@ -1,0 +1,9 @@
+Grid Design Class
+
+# Purpose of this class
+To manage the entire grid
+
+# Main attributes
+- nodes (Node) : A list of nodes
+- transmissions (str) : A list of all transmission lines
+- graph : to represent the network connections
