@@ -11,7 +11,7 @@ To manage the entire grid
 # Main methods
 .add_node --> To add a generator or a consumer
 .add_transmission --> To add a transmission line
-.get_node --> To identify a node
+.get_node_validity --> To identify a node
 .get_connected_nodes (Node) --> To get the list of connected nodes
 .get_all_generators --> returns the list of generators
 .get_all_consumers --> returns the list of consumers

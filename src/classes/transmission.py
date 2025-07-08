@@ -1,3 +1,4 @@
+from node import Node
 class Transmission:
     def __init__(self, transmission_id : str, start : Node, end : Node, capacity : float,
                  resistance : float, length : float, current_flow: float,loss : float):
@@ -24,6 +25,12 @@ class Transmission:
             return True
         else:
             return False
+
+    def get_capacity(self):
+        return self.__capacity
+
+    def get_resistance(self):
+        return self.__resistance
 
     # To display the transmission line
     def get_transmission(self):

@@ -29,3 +29,10 @@ class Node:
     def get_connections(self):
         return self.__connections
 
+    @property
+    def node_id(self):
+        return self.__node_id
+
+    def get_node_type(self):
+        return self.__node_type
+
