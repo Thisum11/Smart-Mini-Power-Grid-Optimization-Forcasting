@@ -1,5 +1,5 @@
 from typing import Tuple
-from node import Node
+from .node import Node
 class Generator(Node):
 
     def __init__(self, node_id:str, name:str, node_type:str, region:str, location: Tuple [float, float],
