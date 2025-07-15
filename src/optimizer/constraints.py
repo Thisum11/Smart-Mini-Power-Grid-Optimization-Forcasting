@@ -7,6 +7,14 @@ from classes.transmission import Transmission
 from classes.node import Node
 
 def generator_bounds(generators: List[Generator]) -> List[Tuple[float, float]]:
-    for gen in generators:
-        return [(gen.get_min_capacity()), (gen.get_max_capacity())]
+    return [(gen.get_min_capacity(), gen.get_max_capacity()) for gen in generators]
 
+
+def power_balance (
+        generators: List[Generator],
+        consumers: List[Consumer],
+        timestep : int
+) -> Tuple[np.ndarray, float]:
+    left_eq = np.array([1.0]*len(generators))
+    right_eq = sum(consumer.get_demand(timestep) for consumer in consumers)
+    return left_eq, right_eq
